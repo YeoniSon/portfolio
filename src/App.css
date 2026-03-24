@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fff8ee;
+  padding-top: 82px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+}
+
+#about,
+#project {
+  scroll-margin-top: 96px;
+}
+
+#skills {
+  scroll-margin-top: 76px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 120px 24px 24px;
+  scroll-margin-top: 90px;
+}
+
+.section h2 {
+  margin-top: 0;
+}

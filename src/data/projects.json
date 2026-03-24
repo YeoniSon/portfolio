@@ -1,0 +1,59 @@
+{
+  "perPage": 3,
+  "projects": [
+    {
+      "id": "1",
+      "title": "프로젝트 제목 1",
+      "shortDescription": "한 줄 요약 설명을 여기에 적습니다. 한 슬라이드에 카드 3개가 보입니다.",
+      "detailDescription": "기술 스택, 구현 포인트, 트러블슈팅 등 자세한 내용을 여기에 작성합니다.\n\n• 주요 기능\n• 사용 기술\n• 배포 및 링크",
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 1 미리보기",
+      "deployUrl": "https://example.com"
+    },
+    {
+      "id": "2",
+      "title": "프로젝트 제목 2",
+      "shortDescription": "두 번째 프로젝트 요약. 썸네일과 맞는 설명으로 바꿔 주세요.",
+      "detailDescription": "상세 설명 예시입니다.\n\nGitHub README에 적은 내용을 옮겨와도 좋습니다.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 2 미리보기",
+      "deployUrl": "https://example.com"
+    },
+    {
+      "id": "3",
+      "title": "프로젝트 제목 3",
+      "shortDescription": "세 번째 카드. imageUrl은 /image/xxx.png 형태로 로컬 이미지도 가능합니다.",
+      "detailDescription": "모달에 스크린샷 설명, 아키텍처 등을 길게 써도 됩니다.",
+      "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 3 미리보기",
+      "deployUrl": "https://example.com"
+    },
+    {
+      "id": "4",
+      "title": "프로젝트 제목 4",
+      "shortDescription": "네 번째 예시. 슬라이드(다음 페이지)에서 보입니다.",
+      "detailDescription": "두 번째 슬라이드 첫 카드 상세 내용입니다.",
+      "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 4 미리보기",
+      "deployUrl": "https://example.com"
+    },
+    {
+      "id": "5",
+      "title": "프로젝트 제목 5",
+      "shortDescription": "다섯 번째 프로젝트 요약 텍스트입니다.",
+      "detailDescription": "다섯 번째 상세 설명.",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 5 미리보기",
+      "deployUrl": "https://example.com"
+    },
+    {
+      "id": "6",
+      "title": "프로젝트 제목 6",
+      "shortDescription": "여섯 번째. 마지막 슬라이드의 세 카드 중 하나입니다.",
+      "detailDescription": "여섯 번째 상세 설명.",
+      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
+      "imageAlt": "프로젝트 6 미리보기",
+      "deployUrl": "https://example.com"
+    }
+  ]
+}
