@@ -39,10 +39,7 @@ const ProjectsSection = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [modalProject, setModalProject] = useState(null);
 
-  const pages = useMemo(
-    () => chunkProjects(projects, PROJECTS_PER_PAGE),
-    [],
-  );
+  const pages = useMemo(() => chunkProjects(projects, PROJECTS_PER_PAGE), []);
   const pageCount = pages.length;
 
   const openModal = (project) => setModalProject(project);
@@ -92,7 +89,22 @@ const ProjectsSection = () => {
                 <ProjectPage key={pageIdx} $pageCount={pageCount}>
                   <ProjectsSlideGrid>
                     {page.map((p) => (
-                      <ProjectCard key={p.id}>
+                      <ProjectCard
+                        key={p.id}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => {
+                          if (!p.deployUrl) openModal(p);
+                        }}
+                        onKeyDown={(e) => {
+                          if (
+                            (e.key === "Enter" || e.key === " ") &&
+                            !p.deployUrl
+                          ) {
+                            openModal(p);
+                          }
+                        }}
+                      >
                         <ProjectPreviewImage>
                           <img
                             src={p.imageUrl}
@@ -105,20 +117,103 @@ const ProjectsSection = () => {
                           <ProjectPreviewDesc>
                             {p.shortDescription}
                           </ProjectPreviewDesc>
+
+                          <div
+                            style={{
+                              fontSize: 12,
+                              color: "#666",
+                              lineHeight: 1.4,
+                            }}
+                          >
+                            <div style={{ marginBottom: 6 }}>
+                              <span style={{ fontWeight: 700 }}>기간</span>
+                              <div style={{ marginBottom: 6 }}>
+                                {p.period || "-"}
+                              </div>
+                            </div>
+
+                            <div style={{ marginBottom: 6 }}>
+                              <span style={{ fontWeight: 700 }}>기술</span>
+                              <div style={{ marginBottom: 6 }}>
+                                {p.tech || "-"}
+                              </div>
+                            </div>
+
+                            <div style={{ marginTop: 6 }}>
+                              <span style={{ fontWeight: 700 }}>기능</span>
+                              <div
+                                style={{
+                                  whiteSpace: "pre-line",
+                                  marginBottom: 6,
+                                }}
+                              >
+                                {String(p.function || "")
+                                  .split("\n")
+                                  .map((line) => line.trim())
+                                  .filter(Boolean)
+                                  .slice(0, 4)
+                                  .join("\n") || "-"}
+                              </div>
+                            </div>
+                          </div>
+
                           <ProjectButtons>
-                            <ProjectButtonSecondary
-                              type="button"
-                              onClick={() => openModal(p)}
-                            >
-                              자세히 보기
-                            </ProjectButtonSecondary>
-                            <ProjectButtonPrimary
-                              href={p.deployUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              배포 사이트
-                            </ProjectButtonPrimary>
+                            {p.githubUrl ? (
+                              <ProjectButtonSecondary
+                                as="a"
+                                href={p.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                }}
+                              >
+                                ReadMe
+                              </ProjectButtonSecondary>
+                            ) : (
+                              <ProjectButtonSecondary
+                                type="button"
+                                disabled
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                ReadMe
+                              </ProjectButtonSecondary>
+                            )}
+
+                            {p.chatUrl ? (
+                              <ProjectButtonSecondary
+                                as="a"
+                                href={p.chatUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                채팅 사이트
+                              </ProjectButtonSecondary>
+                            ) : null}
+
+                            {p.deployUrl ? (
+                              <ProjectButtonPrimary
+                                as="a"
+                                href={p.deployUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                배포 사이트
+                              </ProjectButtonPrimary>
+                            ) : (
+                              <ProjectButtonPrimary
+                                as="button"
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  openModal(p);
+                                }}
+                              >
+                                배포 준비중
+                              </ProjectButtonPrimary>
+                            )}
                           </ProjectButtons>
                         </ProjectPreviewBody>
                       </ProjectCard>
@@ -171,17 +266,20 @@ const ProjectsSection = () => {
             <ModalTitle id="project-modal-title">
               {modalProject.title}
             </ModalTitle>
-            <ModalBody>{modalProject.detailDescription}</ModalBody>
+            <ModalBody>{modalProject.unDeployReason || "-"}</ModalBody>
             <ModalActions>
-              <ProjectButtonSecondary type="button" onClick={closeModal}>
-                닫기
-              </ProjectButtonSecondary>
-              <ProjectButtonPrimary
-                href={modalProject.deployUrl}
+              <ProjectButtonSecondary
+                type="button"
+                as="a"
+                href={modalProject.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                배포 사이트 열기
+                ReadMe
+              </ProjectButtonSecondary>
+
+              <ProjectButtonPrimary as="button" type="button" disabled>
+                배포 준비중
               </ProjectButtonPrimary>
             </ModalActions>
           </ModalPanel>

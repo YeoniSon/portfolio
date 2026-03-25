@@ -160,6 +160,7 @@ export const ProjectButtonSecondary = styled.button`
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background: #f7f7f7;
