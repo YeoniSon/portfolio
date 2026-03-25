@@ -39,6 +39,13 @@ const ProjectsSection = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [modalProject, setModalProject] = useState(null);
 
+  const withBasePath = (src) => {
+    if (!src) return src;
+    const base = process.env.PUBLIC_URL || "";
+    if (src.startsWith("/")) return `${base}${src}`;
+    return `${base}/${src}`.replace(/\/+/g, "/");
+  };
+
   const pages = useMemo(() => chunkProjects(projects, PROJECTS_PER_PAGE), []);
   const pageCount = pages.length;
 
@@ -107,7 +114,7 @@ const ProjectsSection = () => {
                       >
                         <ProjectPreviewImage>
                           <img
-                            src={p.imageUrl}
+                            src={withBasePath(p.imageUrl)}
                             alt={p.imageAlt}
                             loading="lazy"
                           />

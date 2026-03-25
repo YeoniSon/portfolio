@@ -13,7 +13,10 @@ const Profile = () => {
     <div>
       <ProfileContainer>
         <Image>
-          <img src="/image/IMG_8710.JPG" alt="Profile" />
+          <img
+            src={`${process.env.PUBLIC_URL}/image/IMG_8710.JPG`}
+            alt="Profile"
+          />
         </Image>
         <AboutContentContainer>
           <MainContent>
