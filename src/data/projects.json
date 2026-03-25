@@ -23,7 +23,7 @@
       "shortDescription": "야구 팬들이 경기별 채팅과 게시글을 작성할 수 있는 웹사이트",
       "tech": "React, JavaScript, CSS",
       "function": "* 사이드바 메뉴 활성화 기능 \n * 게시판 필터링, 페이징 기능 \n * 채팅방 구현 \n * SPA 구조 설계로 페이지 전환",
-      "imageUrl": "/image/fanball.png",
+      "imageUrl": "/image/Fanball.png",
       "imageAlt": "FanballProject 미리보기",
       "githubUrl": "https://github.com/YeoniSon/fanball",
       "deployUrl": "https://yeonison.github.io/fanball/"
