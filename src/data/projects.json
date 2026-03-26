@@ -8,7 +8,7 @@
       "projectType": "개인 프로젝트(Back End)",
       "shortDescription": "취미를 게시판으로 공유하고 1:1 채팅을 할 수 있는 웹사이트",
       "tech": "Spring, SpringBoot, Spring Security, Jwt, JPA, MySQL, H2, Swagger, WebSocket, Docker, Docker Hub, AWS, SE2",
-      "function": "* 게시글 작성, 조회, 수정, 삭제 기능(CRUD)\n * RestApi 구현 \n * JWT기반 사용자 인증 및 회원 관리 기능 \n * WebSocket을 활용한 1:1 실시간 채팅 기능 \n * AWS의 SE2와 RDS를 이용해 배포",
+      "function": "* 게시글 작성, 조회, 수정, 삭제 기능(CRUD)\n * RestAPI 구현 \n * JWT기반 사용자 인증 및 회원 관리 기능 \n * WebSocket을 활용한 1:1 실시간 채팅 기능 \n * AWS의 SE2와 RDS를 이용해 배포",
       "imageUrl": "/image/HobbyProject.png",
       "imageAlt": "HobbyProject 미리보기",
       "githubUrl": "https://github.com/YeoniSon/hobbyProject",

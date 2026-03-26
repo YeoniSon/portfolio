@@ -158,7 +158,7 @@ const ProjectsSection = () => {
                                   .split("\n")
                                   .map((line) => line.trim())
                                   .filter(Boolean)
-                                  .slice(0, 4)
+                                  .slice(0, 6)
                                   .join("\n") || "-"}
                               </div>
                             </div>
