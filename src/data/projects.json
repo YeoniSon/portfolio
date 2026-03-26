@@ -12,8 +12,8 @@
       "imageUrl": "/image/HobbyProject.png",
       "imageAlt": "HobbyProject 미리보기",
       "githubUrl": "https://github.com/YeoniSon/hobbyProject",
-      "deployUrl": "https://example.com",
-      "chatUrl": "https://example.com"
+      "deployUrl": "http://3.39.10.40/swagger-ui/index.html",
+      "chatUrl": "http://3.39.10.40/chat-demo.html"
     },
     {
       "id": "2",
