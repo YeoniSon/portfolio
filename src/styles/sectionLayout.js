@@ -9,4 +9,9 @@ export const sectionContentWidth = css`
   padding-left: 32px;
   padding-right: 32px;
   box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;

@@ -8,6 +8,20 @@
       "projectType": "개인 프로젝트(Back End)",
       "shortDescription": "취미를 게시판으로 공유하고 1:1 채팅을 할 수 있는 웹사이트",
       "tech": "Spring, SpringBoot, Spring Security, Jwt, JPA, MySQL, H2, Swagger, WebSocket, Docker, Docker Hub, AWS, SE2",
+      "techStack": [
+        { "name": "Spring Boot", "color": "#6db33f" },
+        { "name": "Spring Security", "color": "#6db33f" },
+        { "name": "JWT", "color": "#6db33f" },
+        { "name": "JPA", "color": "#6db33f" },
+        { "name": "MySQL", "color": "#4479a1" },
+        { "name": "H2", "color": "#1b5c8a" },
+        { "name": "Swagger", "color": "#85ea2d", "textColor": "#111" },
+        { "name": "WebSocket", "color": "#4f46e5" },
+        { "name": "Docker", "color": "#716bed" },
+        { "name": "Docker Hub", "color": "#2496ed" },
+        { "name": "AWS", "color": "#28a745" },
+        { "name": "EC2", "color": "#28a745" }
+      ],
       "function": "* 게시글 작성, 조회, 수정, 삭제 기능(CRUD)\n * RestAPI 구현 \n * JWT기반 사용자 인증 및 회원 관리 기능 \n * WebSocket을 활용한 1:1 실시간 채팅 기능 \n * AWS의 SE2와 RDS를 이용해 배포",
       "imageUrl": "/image/HobbyProject.png",
       "imageAlt": "HobbyProject 미리보기",
@@ -22,6 +36,11 @@
       "projectType": "개인 프로젝트(Front End)",
       "shortDescription": "야구 팬들이 경기별 채팅과 게시글을 작성할 수 있는 웹사이트",
       "tech": "React, JavaScript, CSS",
+      "techStack": [
+        { "name": "React", "color": "#3f5de2" },
+        { "name": "JavaScript", "color": "#f7df1e", "textColor": "#111" },
+        { "name": "CSS", "color": "#fe2334" }
+      ],
       "function": "* 사이드바 메뉴 활성화 기능 \n * 게시판 필터링, 페이징 기능 \n * 채팅방 구현 \n * SPA 구조 설계로 페이지 전환",
       "imageUrl": "/image/Fanball.png",
       "imageAlt": "FanballProject 미리보기",
@@ -35,6 +54,14 @@
       "projectType": "팀프로젝트(Front End, Back End)",
       "shortDescription": "공연 정보 제공과 예매할 수 있는 웹사이트",
       "tech": "Node.js, Express, React, JavaScript, CSS, MySQL",
+      "techStack": [
+        { "name": "Node.js", "color": "#33998b" },
+        { "name": "Express", "color": "#33997f" },
+        { "name": "React", "color": "#3f5de2" },
+        { "name": "JavaScript", "color": "#f7df1e", "textColor": "#111" },
+        { "name": "CSS", "color": "#fe2334" },
+        { "name": "MySQL", "color": "#4479a1" }
+      ],
       "function": "* MySQL 기반 데이터베이스 설계 및 서버 연동\n * 사용자 인증 기능 구현(회원가입,로그인, ID/PW 찾기)\n * 관리자 페이지 구현(Front, Back) \n * 회원 정보 수정 기능 및 사용자 데이터 관리 로직 구현\n * 프론트엔드와 백엔드 API 연동을 통한 전체 서비스 흐름 구성",
       "imageUrl": "/image/ticketPong.png",
       "imageAlt": "TicketPong 미리보기",

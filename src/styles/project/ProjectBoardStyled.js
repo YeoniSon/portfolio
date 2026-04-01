@@ -145,22 +145,34 @@ export const ProjectPreviewDesc = styled.p`
 
 export const ProjectButtons = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 6px;
   margin-top: auto;
   padding-top: 8px;
+  min-width: 0;
+
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const ProjectButtonSecondary = styled.button`
+  flex: 1 1 0;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #ccc;
   background: #fff;
   color: #333;
-  padding: 10px 16px;
+  padding: 9px 8px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: clamp(11px, 1.15vw, 13px);
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
 
   &:hover {
     background: #f7f7f7;
@@ -168,18 +180,22 @@ export const ProjectButtonSecondary = styled.button`
 `;
 
 export const ProjectButtonPrimary = styled.a`
+  flex: 1 1 0;
+  min-width: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
   background: #111;
   color: #fff;
-  padding: 10px 16px;
+  padding: 9px 8px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: clamp(11px, 1.15vw, 13px);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  text-align: center;
+  line-height: 1.2;
 
   &:hover {
     background: #333;

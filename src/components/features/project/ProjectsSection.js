@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { MenuTitle } from "../../../styles/CommonStyled";
+import { Skill, SkillContent } from "../../../styles/SkillesStyled";
 import {
   ProjectBoardContainer,
   ProjectsCarouselRow,
@@ -141,9 +142,44 @@ const ProjectsSection = () => {
 
                             <div style={{ marginBottom: 6 }}>
                               <span style={{ fontWeight: 700 }}>기술</span>
-                              <div style={{ marginBottom: 6 }}>
-                                {p.tech || "-"}
-                              </div>
+                              {Array.isArray(p.techStack) &&
+                              p.techStack.length > 0 ? (
+                                <SkillContent
+                                  style={{ marginTop: 6, marginBottom: 4 }}
+                                >
+                                  {p.techStack.map((item, idx) => {
+                                    const name =
+                                      typeof item === "string"
+                                        ? item
+                                        : item?.name;
+                                    if (!name) return null;
+                                    const bg =
+                                      typeof item === "object" && item?.color
+                                        ? item.color
+                                        : "#6b7280";
+                                    const fg =
+                                      typeof item === "object" &&
+                                      item?.textColor
+                                        ? item.textColor
+                                        : "#fff";
+                                    return (
+                                      <Skill
+                                        key={`${p.id}-tech-${idx}`}
+                                        style={{
+                                          backgroundColor: bg,
+                                          color: fg,
+                                        }}
+                                      >
+                                        {name}
+                                      </Skill>
+                                    );
+                                  })}
+                                </SkillContent>
+                              ) : (
+                                <div style={{ marginTop: 4, marginBottom: 6 }}>
+                                  {p.tech || "-"}
+                                </div>
+                              )}
                             </div>
 
                             <div style={{ marginTop: 6 }}>

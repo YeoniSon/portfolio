@@ -29,11 +29,17 @@ const Profile = () => {
 기능 간의 영향과 구조를 고려한 개발을 지향합니다.`}
           </SubContent>
 
-          <Github>
+          <Github
+            href="https://github.com/YeoniSon"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub 프로필 열기"
+          >
             <Icon>
               <img
                 src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
-                alt="GitHub 아이콘"
+                alt=""
+                aria-hidden
               />
             </Icon>
             <SubContent>Git</SubContent>

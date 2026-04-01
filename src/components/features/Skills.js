@@ -10,7 +10,6 @@ import {
 } from "../../styles/SkillesStyled";
 
 const backend = [
-  { name: "Java", color: "#f89820" },
   { name: "Spring Boot", color: "#6db33f" },
   { name: "Gradle", color: "#02303a" },
   { name: "Spring Security + JWT", color: "#6db33f" },
